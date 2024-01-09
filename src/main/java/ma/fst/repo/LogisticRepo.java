@@ -13,5 +13,5 @@ public interface LogisticRepo extends JpaRepository<LogisticEntity,Long> {
     List<LogisticEntity> findByUserId(@Param("userId") Long userId);
 
     @Query("SELECT a FROM LogisticEntity a WHERE a.status = :status")
-    List<LogisticEntity> findByStatus(@Param("type") Status status);
+    List<LogisticEntity> findByStatus(@Param("status") Status status);
 }
